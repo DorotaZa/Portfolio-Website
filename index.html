@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Raleway:wght@100&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/43a187c46f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- ----------------------homepage------------------ -->
+    <header id="homepage">
+        <nav>
+            <div class="logo">
+                <a href="#homepage">
+                    <img src="images/logo.png" alt="">
+                </a>
+            </div>
+            <div class="nav-right">
+                <ul id="side-menu">
+                    <li> <a href="#about"> ABOUT </a></li>
+                    <li> <a href="#services"> SERVICES </a></li>
+                    <li> <a href="#contact"> CONTACT </a></li>
+                    <i id="icon" class="fas fa-times" onclick="closeMenu()"></i>
+                </ul>
+                <div class="search-box">
+                    <input type="text" placeholder="search here...">
+                    <a href="#"><i class="fas fa-search"></i></a>
+                </div> 
+            </div>
+            <i id="icon" class="fas fa-bars" onclick="openMenu()"></i>
+        </nav>
+        
+
+        <div class="header-content">
+            <div class="intro-content">
+                <div class="intro-text">
+                    <h3>Hi, I'm Dorota</h3>
+                    <div class="text-wrapper">
+                        <div class="box b1">SOFTWARE DEVELOPER</div>
+                        <div class="box b2">WEB DEVELOPER</div>
+                        <div class="box b3">ARCHITECTURAL DESIGNER</div>
+                    </div>
+                </div>
+                <div class="link-more">
+                    <button class="btn3"><a href="#about">MORE ABOUT ME</a><i class="fa fa-angle-double-right"
+                            aria-hidden="true"></i></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ----------------------about------------------ -->
+    <div id="about" class="about">
+        <div class="container">
+            <h1>About me</h1>
+            <div class="row">
+                    <div class="description">
+                        <div class="services-list">
+                            <div>
+                                <i class="fa fa-handshake-o" aria-hidden="true"></i>
+                                <h2>Dorota Żak</h2>
+                                <p>SOFTWARE DEVELOPER | WEB DEVELOPER | ARCHITECTURAL DESIGNER</p>
+                                <p> I work as a software developer specializing in C++ at Ericsson, located in Cracow,
+                                    Poland. During my free time, I have been improving my web development skills, using
+                                    it as a platform to explore my creative side and delve into various forms of design.
+                                </p>
+                                <!-- <a href="">learn more</a> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-media">
+                        <h2>Find me on social media</h2>
+                        <p>Check out my GitHub profile to get an insight into the projects I've worked on.</p>
+                        <div class="icons">
+                            <a href="https://github.com/DorotaZa"><i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/dorotaazak/"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://www.facebook.com/dorota.zak.585"><i class="fab fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/_dzak/"><i class="fab fa-instagram"></i></a>
+                        </div>
+                        <div class="links">
+                            <button class="btn"><a href="files/Dorota_Zak_CV.pdf" download><i
+                                        class="fa fa-download"></i> DOWNLOAD</a></button>
+                            <button class="btn2"><a href="#contact">CONTACT ME</a><i class="fa fa-angle-double-right"
+                                    aria-hidden="true"></i></button>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ----------------------services------------------ -->
+    <div id="services" class="services">
+        <div class="container">
+            <h1>My services</h1>
+            <div class="row">
+                <div class="services-list">
+                    <div>
+                        <i class="fas fa-code"></i>
+                        <h2>Programming</h2>
+                        <p>C++ | JAVASCRIPT | LINUX | WINDOWS</p>
+                        <p>So far, I've had a chance to work in both: back and front-end languages. I believe that
+                            learning C++ only paved my way for understanding software development and will make it much
+                            easier to expand my knowledge in other programming languages.</p>
+                        <!-- <a href="">learn more</a> -->
+                    </div>
+                    <div>
+                        <i class="fas fa-globe"></i>
+                        <h2>Web design</h2>
+                        <p>HTML | CSS | JAVASCRIPT | CMS | REACT</p>
+                        <p>In my web designs, I utilize HTML and CSS as my foundational tools. Then, I employ JavaScript
+                            to add interactivity into the project. I am also familiar with CMS tools, especially
+                            WordPress.</p>
+                        <!-- <a href="">learn more</a> -->
+                    </div>
+                    <div>
+                        <i class="fas fa-landmark"></i>
+                        <h2>Architecture</h2>
+                        <p>SKETCHUP | V-RAY | PHOTOSHOP | AUTOCAD</p>
+                        <p> I create the visual content of the given project at any stage of development- starting from
+                            sketches and basic representations and finishing off with photorealistic architectural
+                            visualizations.</p>
+                        <!-- <a href="">learn more</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ----------------------contact------------------ -->
+    <div id="contact" class="contact">
+        <div class="container">
+            <h1>Get in touch</h1>
+            <div class="row">
+                <div class="row-left">
+                    <h2 class="sub-title">Message me</h2>
+                    <form>
+                        <input type="text" name="name" placeholder="your name" required>
+                        <input type="email" name="email" id="email" placeholder="your e-mail" required>
+                        <textarea name="message" rows="6" placeholder="your message"></textarea>
+                        <!-- <button href="mailto:dorotaa.zak@gmail.com" type="submit">SEND MESSAGE</button> -->
+                        <p><a href="mailto:dorotaa.zak@gmail.com">SEND MESSAGE</a></p>
+                    </form>
+                </div>
+                <div class="row-right">
+                    <h2 class="sub-title">Contact info</h2>
+                    <div class="intro">
+                        <p>Always eager to take up new challenges and open to new possibilities. Feel free to contact
+                            me!</p>
+                    </div>
+                    <div class="sub-box">
+                        <i class="fas fa-signature"></i>
+                        <div class="name">
+                            <span>Name</span>
+                            <p>Dorota Żak</p>
+                        </div>
+                    </div>
+                    <div class="sub-box">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="name">
+                            <span>Location</span>
+                            <p>Cracow, Poland</p>
+                        </div>
+                    </div>
+                    <div class="sub-box">
+                        <i class="fas fa-phone-alt"></i>
+                        <div class="name">
+                            <span>Call me</span>
+                            <p>+3547631128</p>
+                        </div>
+                    </div>
+                    <div class="sub-box">
+                        <i class="fas fa-envelope"></i>
+                        <div class="name">
+                            <span>E-mail me </span>
+                            <p><a href="mailto:dorotaa.zak@gmail.com">dorotaa.zak@gmail.com </a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ----------------------footer------------------ -->
+    <footer>
+        <div class="social-icons">
+            <a href="https://github.com/DorotaZa"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/dorotaazak/"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.facebook.com/dorota.zak.585"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/_dzak/"><i class="fab fa-instagram"></i></a>
+        </div>
+        <div class="copyright">
+            <p>Copyright © 2023 <a href="#homepage">Dorota Zak</a></p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
