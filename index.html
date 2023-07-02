@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Raleway:wght@100&display=swap"
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/43a187c46f.js" crossorigin="anonymous"></script>
+    
 </head>
 <body>
 
@@ -28,10 +29,11 @@
                     <li> <a href="#contact"> CONTACT </a></li>
                     <i id="icon" class="fas fa-times" onclick="closeMenu()"></i>
                 </ul>
-                <div class="search-box">
+                <!-- ------------search tool to be continued-------------- -->
+                <!-- <div class="search-box">
                     <input type="text" placeholder="search here...">
                     <a href="#"><i class="fas fa-search"></i></a>
-                </div> 
+                </div>  -->
             </div>
             <i id="icon" class="fas fa-bars" onclick="openMenu()"></i>
         </nav>
@@ -60,36 +62,37 @@
         <div class="container">
             <h1>About me</h1>
             <div class="row">
-                    <div class="description">
-                        <div class="services-list">
-                            <div>
-                                <i class="fa fa-handshake-o" aria-hidden="true"></i>
-                                <h2>Dorota Żak</h2>
-                                <p>SOFTWARE DEVELOPER | WEB DEVELOPER | ARCHITECTURAL DESIGNER</p>
-                                <p> I work as a software developer specializing in C++ at Ericsson, located in Cracow,
-                                    Poland. During my free time, I have been improving my web development skills, using
-                                    it as a platform to explore my creative side and delve into various forms of design.
-                                </p>
-                                <!-- <a href="">learn more</a> -->
-                            </div>
+                <div class="description">
+                    <div class="services-list">
+                        <div>
+                            <i class="fa fa-handshake-o" aria-hidden="true"></i>
+                            <h2>Dorota Żak</h2>
+                            <p>SOFTWARE DEVELOPER | WEB DEVELOPER | ARCHITECTURAL DESIGNER</p>
+                            <p> I work as a software developer specializing in C++ at Ericsson, located in Cracow,
+                                Poland. During my free time, I have been improving my web development skills, using
+                                it as a platform to explore my creative side and delve into various forms of design.
+                            </p>
+                            <!-- <a href="">learn more</a> -->
                         </div>
                     </div>
-                    <div class="social-media">
-                        <h2>Find me on social media</h2>
-                        <p>Check out my GitHub profile to get an insight into the projects I've worked on.</p>
-                        <div class="icons">
-                            <a href="https://github.com/DorotaZa"><i class="fab fa-github"></i></a>
-                            <a href="https://www.linkedin.com/in/dorotaazak/"><i class="fab fa-linkedin"></i></a>
-                            <a href="https://www.facebook.com/dorota.zak.585"><i class="fab fa-facebook"></i></a>
-                            <a href="https://www.instagram.com/_dzak/"><i class="fab fa-instagram"></i></a>
-                        </div>
-                        <div class="links">
-                            <button class="btn"><a href="files/Dorota_Zak_CV.pdf" download><i
-                                        class="fa fa-download"></i> DOWNLOAD</a></button>
-                            <button class="btn2"><a href="#contact">CONTACT ME</a><i class="fa fa-angle-double-right"
-                                    aria-hidden="true"></i></button>
-                        </div>
+                </div>
+                <div class="additional">
+                    <h2>Find me on social media</h2>
+                    <p>Check out my GitHub profile to get an insight into the projects I've worked on.</p>
+                    <div class="icons">
+                        <a href="https://github.com/DorotaZa" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/dorotaazak/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.facebook.com/dorota.zak.585" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/_dzak/" target="_blank"><i class="fab fa-instagram"></i></a>
                     </div>
+                    <div class="links">
+                        <button class="btn"><a href="files/Dorota_Zak_CV.pdf" download><i class="fa fa-download"></i>
+                                DOWNLOAD</a></button>
+                        <button class="btn2"><a href="#contact">CONTACT ME</a><i class="fa fa-angle-double-right"
+                                aria-hidden="true"></i></button>
+                    </div>
+                    <!-- <a href="">learn more</a> -->
+                </div>
             </div>
         </div>
     </div>
@@ -139,19 +142,18 @@
             <div class="row">
                 <div class="row-left">
                     <h2 class="sub-title">Message me</h2>
-                    <form>
-                        <input type="text" name="name" placeholder="your name" required>
+                    <form id="contact-form">
+                        <input type="text" name="name" id="name" placeholder="your name" required>
                         <input type="email" name="email" id="email" placeholder="your e-mail" required>
-                        <textarea name="message" rows="6" placeholder="your message"></textarea>
-                        <!-- <button href="mailto:dorotaa.zak@gmail.com" type="submit">SEND MESSAGE</button> -->
-                        <p><a href="mailto:dorotaa.zak@gmail.com">SEND MESSAGE</a></p>
+                        <textarea name="message" rows="6" id="message" placeholder="your message"></textarea>
+                        <button class="btn submit-btn" type="submit" onclick="sendEmail()" >SEND MESSAGE</button>
+                        <!-- <p><a href="mailto:dorotaa.zak@gmail.com">SEND MESSAGE</a></p> -->
                     </form>
                 </div>
                 <div class="row-right">
                     <h2 class="sub-title">Contact info</h2>
                     <div class="intro">
-                        <p>Always eager to take up new challenges and open to new possibilities. Feel free to contact
-                            me!</p>
+                        <p>Always eager to take up new challenges and open to new possibilities. Feel free to contact me!</p>
                     </div>
                     <div class="sub-box">
                         <i class="fas fa-signature"></i>
@@ -171,14 +173,14 @@
                         <i class="fas fa-phone-alt"></i>
                         <div class="name">
                             <span>Call me</span>
-                            <p>+3547631128</p>
+                            <p><a href="tel:+3547631128">+354 7631128</a></p>
                         </div>
                     </div>
                     <div class="sub-box">
                         <i class="fas fa-envelope"></i>
                         <div class="name">
                             <span>E-mail me </span>
-                            <p><a href="mailto:dorotaa.zak@gmail.com">dorotaa.zak@gmail.com </a></p>
+                            <p><a href="mailto:dorotaa.zak@gmail.com" target="_blank">dorotaa.zak@gmail.com </a></p>
                         </div>
                     </div>
                 </div>
@@ -189,15 +191,26 @@
     <!-- ----------------------footer------------------ -->
     <footer>
         <div class="social-icons">
-            <a href="https://github.com/DorotaZa"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/dorotaazak/"><i class="fab fa-linkedin"></i></a>
-            <a href="https://www.facebook.com/dorota.zak.585"><i class="fab fa-facebook"></i></a>
-            <a href="https://www.instagram.com/_dzak/"><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/DorotaZa" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/dorotaazak/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.facebook.com/dorota.zak.585" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/_dzak/" target="_blank"><i class="fab fa-instagram"></i></a>
         </div>
         <div class="copyright">
             <p>Copyright © 2023 <a href="#homepage">Dorota Zak</a></p>
         </div>
     </footer>
+
+    <!-- ---------------js------------- -->
+    <!-- <script src="https://cdn.emailjs.com/sdk/2.6.4/email.min.js"></script> -->
     <script src="script.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init("8BVAvw9SdM8t-mZ2f");
+    })();
+    </script>
 </body>
 </html>
