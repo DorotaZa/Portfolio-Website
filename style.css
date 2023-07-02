@@ -47,7 +47,7 @@ header
 {
     width: 100%;
     background-image: url("images/backgroundImage.jpg");
-    background-position: bottom;
+    background-position:center;
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -126,14 +126,6 @@ nav ul li a:hover::after
 {
 width: 50%;
 }
-
-
-
-/* nav ul li a:hover
-{
-    color:#005c5a;
-    font-weight: bold;
-} */
 
 .search-box
 {
@@ -235,7 +227,7 @@ width: 50%;
 {
     position: absolute;
     width: 100%;
-    top: 80%;
+    top: 77%;
     left: 35%;
     transform: translate(-50%,-50%);
     font-size: 18px;
@@ -254,8 +246,8 @@ width: 50%;
     border:none;
     color: black;
     padding: 12px 30px;
+    margin-top: 65px;
     transition: 0.5s;
-    
   }
 
   .btn3 a
@@ -293,17 +285,17 @@ width: 50%;
 
 .b1
 {
-    animation: anim1 15s infinite;
+    animation: anim1 10s infinite;
 }
 
 .b2
 {
-    animation: anim2 15s infinite;
+    animation: anim2 10s infinite;
 }
 
 .b3
 {
-    animation: anim3 15s infinite;
+    animation: anim3 10s infinite;
 }
 
 @keyframes anim1
@@ -363,40 +355,26 @@ width: 50%;
     flex-wrap: wrap;
 }
 
-.social-media
-{
-    flex-basis: 40%;
-    padding: 60px 0;
-    justify-items: left;
-}
-
-.social-media h2
+.additional h2
 {
     font-size: 30px;
-    margin-bottom: 15px;
+    margin: 60px 0;
 }
 
-.social-media p
+.additional p
 {
-margin-top: 30px;
+    margin-bottom: 30px;
 }
 
-.icons
-{
-    display: flex;
-    align-items: center;
-    justify-content: left;
-}
-
-.icons a
+.additional a
 {
     color:#005c5a;
     font-size: 30px;
-    margin: 50px 100px 50px 0;
+    margin-right: 100px;
     transition: 0.5s;
 }
 
-.icons a:hover
+.additional a:hover
 {
     color: black;
 }
@@ -422,17 +400,11 @@ margin-top: 30px;
 .description
 {
     flex-basis: 30%;
-    /* justify-content: center;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
-    flex-wrap: wrap; */
+    flex-wrap: wrap;
     margin: 20px auto 20px auto;
-}
-
-.links
-{
-    display: flex;
-    align-items: left;
 }
 
 .btn 
@@ -447,7 +419,7 @@ margin-top: 30px;
     color: #454545;
     padding: 12px 30px;
     cursor: pointer;
-    margin-right: 60px;
+    margin: 60px 60px 0 0;
     transition: 0.5s;
   }
 
@@ -546,7 +518,6 @@ margin-top: 30px;
     color:#c3c3c3;
     transform: translateY(-10px);
 }
-
 
 
 .skill
@@ -738,7 +709,6 @@ nav #icon
 
 /* --------------------smaller screens------------------------ */
 
-
 /* -----------tablet-------------- */
 @media only screen and (max-width: 900px)
 {
@@ -755,22 +725,12 @@ nav #icon
     .intro-text h3
     {
         font-size: 40px;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
     }
 
     .text-wrapper .box
     {
         font-size: 40px;
-    }
-
-    .search-box
-    {
-        margin-left: 0;
-    }
-
-    nav ul li a
-    {
-        font-size: 15px;
     }
 
     .logo a img
@@ -795,20 +755,24 @@ nav #icon
         background-position: left;
     }
 
+    /* new */
     .intro-text
     {
-        margin-left: 10%;
-    }
-
-    .link-more
-    {
-        margin-left: 10%;
+        top: 80%;
+        left: 35%;
     }
 
     .intro-text h3
     {
-        font-size: 25px;
-        margin-bottom: 50px;
+        margin-bottom: 0;
+        font-size: 20px;
+        color:#c3c3c3;
+    }
+
+    .link-more
+    {
+        top: 85%;
+        left: 35%;
     }
 
     .text-wrapper .box
@@ -819,10 +783,12 @@ nav #icon
     .btn3 a
     {
         color:#c3c3c3;
+        font-size: 12px;
     }
     .btn3 
     {
         color:#c3c3c3;
+        font-size: 12px;
     }
 
     .row-left, .row-right
@@ -845,14 +811,6 @@ nav #icon
         margin: 0;
     }
     
-
-    .social-media
-    {
-        flex-basis: 100%;
-        padding: 0;
-        margin-top: 20px;
-    }
-
     .desc-box div
     {
         padding: 30px;
@@ -864,17 +822,11 @@ nav #icon
         margin-bottom: 0px;
     }
 
-    .social-media p
+    .btn
     {
-        padding-right: 5%;
+        margin-bottom: 20px;
     }
 
-    .icons a
-    {
-        margin: 25px 40px;
-    }
-
- 
     /* -----------------sidebar---------------- */
     nav #icon
     {
@@ -925,4 +877,57 @@ nav #icon
         cursor: pointer;
     }
 
+/* ----------fix for double lines------------ */
+    @media only screen and (max-width: 435px)
+    {
+        .link-more
+        {
+            top: 92%;
+            left: 35%;
+        }
+        .intro-text
+        {
+            margin-left: 15%;
+        }
+        .link-more
+        {
+            margin-left: 15%;
+        }
+    }
+}
+
+/* -----------form messages--------------- */
+.mail-wrapper {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed; /* Sit on top of the page content */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    margin: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 20000; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+}
+
+.mail-success,
+.mail-fail {
+    position: absolute;
+    background-color:#c3c3c3;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 30px;
+    max-width: 500px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.mail-success {
+    color:#005c5a;
+    display: none;
+}
+
+.mail-fail {
+    color: darkred;
+    display: none;
 }
