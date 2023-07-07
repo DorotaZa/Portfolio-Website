@@ -882,7 +882,11 @@ nav #icon
     {
         .link-more
         {
+<<<<<<< HEAD
             top: 92%;
+=======
+            top: 90%;
+>>>>>>> f50873d7b17f4b9bf3ab9ec416049408507dee7a
             left: 35%;
         }
         .intro-text
@@ -894,6 +898,7 @@ nav #icon
             margin-left: 15%;
         }
     }
+<<<<<<< HEAD
 }
 
 /* -----------form messages--------------- */
@@ -930,4 +935,6 @@ nav #icon
 .mail-fail {
     color: darkred;
     display: none;
+=======
+>>>>>>> f50873d7b17f4b9bf3ab9ec416049408507dee7a
 }
